@@ -1,0 +1,31 @@
+.button-root {
+  button {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #1e9fd2;
+    border-radius: 6px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & span {
+      height: 30px;
+    }
+
+    &[data-disabled='false'] {
+      &:hover {
+        cursor: pointer;
+        background-color: #f0fdff;
+      }
+      &:active {
+        background-color: #c7f7ff;
+      }
+    }
+
+    &[data-disabled='true'] {
+      opacity: 0.48;
+      cursor: not-allowed;
+    }
+  }
+}
